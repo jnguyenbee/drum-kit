@@ -1,3 +1,14 @@
+
+$("button").on("click", (function (event) {
+    var key = $(event.target).text();
+    makeSound(key);
+}))
+
+$("body").keydown(function (event) {
+    makeSound(event.key);
+    buttonAnimation(event.key);
+})
+/*
 for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
 
     // detecting button press
@@ -6,14 +17,16 @@ for (var i = 0; i < document.querySelectorAll(".drum").length; i++) {
         makeSound(key);
         buttonAnimation(key);
     });
-}
+}*/
+
 //detecting key board press
-document.addEventListener("keydown", function (event) {
+
+/*document.addEventListener("keydown", function (event) {
     var key = event.key;
     makeSound(key);
     buttonAnimation(key);
 });
-
+*/
 function makeSound(key) {
     var audio;
     switch (key) {
